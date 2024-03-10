@@ -16,9 +16,25 @@
 <body>
 
 <div class="container">
-    <h1>ASTON MARTIN FORMULA 1 VEHICLES AND PARTS</h1>
+    <div class="p-2 mb-2 rounded bg-success"><a th:href="@{/about}" class="btn btn-info btn-sm mb-3">About Us</a></div>
+
+    <div class="" style="width: 200px">
+        <img src="https://assets.astonmartinf1.com/public/cms/TLZqgZbLojVKsbWBoL6eO/aaa72bf002be5ac4872058e2478dd787/amf1-logo-2024-black_-_Website_footer.png"
+             class="img-fluid">
+    </div>
+
+    <h1 class="text-success text-right">ASTON MARTIN FORMULA 1 VEHICLES AND PARTS</h1>
+
+
+</div>
+
+<div class="container">
+
     <hr>
-    <h2>Vehicle Parts</h2>
+
+    <hr>
+
+        <h2>Vehicle Parts</h2>
     <form th:action="@{/mainscreen}">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
         &nbsp;
