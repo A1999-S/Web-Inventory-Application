@@ -13,6 +13,7 @@ import com.example.demo.service.ProductServiceImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -33,45 +34,93 @@ public class BootStrapData implements CommandLineRunner {
     public BootStrapData(PartRepository partRepository, ProductRepository productRepository, OutsourcedPartRepository outsourcedPartRepository) {
         this.partRepository = partRepository;
         this.productRepository = productRepository;
-        this.outsourcedPartRepository=outsourcedPartRepository;
+        this.outsourcedPartRepository = outsourcedPartRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
 
-       /*
-        OutsourcedPart o= new OutsourcedPart();
-        o.setCompanyName("Western Governors University");
-        o.setName("out test");
-        o.setInv(5);
-        o.setPrice(20.0);
-        o.setId(100L);
-        outsourcedPartRepository.save(o);
-        OutsourcedPart thePart=null;
-        List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
-        for(OutsourcedPart part:outsourcedParts){
-            if(part.getName().equals("out test"))thePart=part;
+        // Checking to see if parts already exist
+        if (partRepository.count() <= 0) {
+
+            // Part 1, Soft Tire
+            OutsourcedPart o = new OutsourcedPart();
+            o.setCompanyName("Aston Martin F1");
+            o.setName("Soft Tire");
+            o.setInv(1);
+            o.setPrice(675.0);
+            o.setId(100);
+            outsourcedPartRepository.save(o);
+
+
+            // Part 2, SuperSoft Tire
+            OutsourcedPart o1 = new OutsourcedPart();
+            o1.setCompanyName("Aston Martin F1");
+            o1.setName("SuperSoft Tire");
+            o1.setInv(1);
+            o1.setPrice(675.0);
+            o1.setId(101);
+            outsourcedPartRepository.save(o1);
+
+            // Part 3, Medium Tire
+            OutsourcedPart o2 = new OutsourcedPart();
+            o2.setCompanyName("Aston Martin F1");
+            o2.setName("Medium Tire");
+            o2.setInv(1);
+            o2.setPrice(675.0);
+            o2.setId(102);
+            outsourcedPartRepository.save(o2);
+
+            // Part 4, Hard Tire
+            OutsourcedPart o3 = new OutsourcedPart();
+            o3.setCompanyName("Aston Martin F1");
+            o3.setName("Hard Tire");
+            o3.setInv(1);
+            o3.setPrice(675.0);
+            o3.setId(103);
+            outsourcedPartRepository.save(o3);
+
+            // Part 5, Wet Tire
+            OutsourcedPart o4 = new OutsourcedPart();
+            o4.setCompanyName("Aston Martin F1");
+            o4.setName("Wet Tire");
+            o4.setInv(1);
+            o4.setPrice(675.0);
+            o4.setId(104);
+            outsourcedPartRepository.save(o4);
+
         }
 
-        System.out.println(thePart.getCompanyName());
-        */
+
+/*        System.out.println(thePart.getCompanyName());
         List<OutsourcedPart> outsourcedParts=(List<OutsourcedPart>) outsourcedPartRepository.findAll();
         for(OutsourcedPart part:outsourcedParts){
             System.out.println(part.getName()+" "+part.getCompanyName());
+        }*/
+
+        // Checking to see if products already exist
+        if (productRepository.count() <= 0) {
+
+            Product carSoft = new Product("AMR24 F1 Race Car (with Soft Tires)", 15000000, 1);
+            Product carSuperSoft = new Product("AMR24 F1 Race Car (with SuperSoft Tires)", 15000000, 1);
+            Product carMedium = new Product("AMR24 F1 Race Car (with Medium Tires)", 15000000, 1);
+            Product carHard = new Product("AMR24 F1 Race Car (with Hard Tires)", 15000000, 1);
+            Product carWet = new Product("AMR24 F1 Race Car (with Wet Tires)", 15000000, 1);
+
+            productRepository.save(carSoft);
+            productRepository.save(carSuperSoft);
+            productRepository.save(carMedium);
+            productRepository.save(carHard);
+            productRepository.save(carWet);
+
+
+/*            System.out.println("Started in Bootstrap");
+            System.out.println("Number of Products" + productRepository.count());
+            System.out.println(productRepository.findAll());
+            System.out.println("Number of Parts" + partRepository.count());
+            System.out.println(partRepository.findAll());
+            */
+
         }
-
-        /*
-        Product bicycle= new Product("bicycle",100.0,15);
-        Product unicycle= new Product("unicycle",100.0,15);
-        productRepository.save(bicycle);
-        productRepository.save(unicycle);
-        */
-
-        System.out.println("Started in Bootstrap");
-        System.out.println("Number of Products"+productRepository.count());
-        System.out.println(productRepository.findAll());
-        System.out.println("Number of Parts"+partRepository.count());
-        System.out.println(partRepository.findAll());
-
     }
 }
