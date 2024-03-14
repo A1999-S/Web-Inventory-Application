@@ -1,9 +1,10 @@
------------- Changes ------------
+--------------------------------------- Changes ---------------------------------
 
-
+-------------------------------- TO LOAD SAMPLE INVENTORY ---------------------------
 ------------------------------------- IMPORTANT!!!!! -------------------------------------
 Database files are inside the main project folder, in a folder titled 'InventoryDatabase'.
    To load the database, please unzip them and add them to your C:\user\[yourname].
+   If this is not done, the sample inventory will NOT load.
 
 
 ## LINES 14 - 100 @ mainscreen.html (Part C)
