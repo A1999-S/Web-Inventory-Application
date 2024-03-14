@@ -1,7 +1,10 @@
 ------------ Changes ------------
 
-Database files are inside the main project folder, in a folder titled 'DB'.
+
+------------------------------------- IMPORTANT!!!!! -------------------------------------
+Database files are inside the main project folder, in a folder titled 'InventoryDatabase'.
    To load the database, please unzip them and add them to your C:\user\[yourname].
+
 
 ## LINES 14 - 100 @ mainscreen.html (Part C)
     -- Title, shop name and look updated. 'About Us' button added
@@ -33,3 +36,6 @@ Database files are inside the main project folder, in a folder titled 'DB'.
 ## (Part I)
     -- LINES 161 - 191 @ PartTest.java in the 'test/java/domain' packages
         4 total tests (two for each inventory minimum and inventory maximum) added
+
+## (Part J)
+    -- DeletePartValidation.java and ValidDeletePart.java (in "/validators" package) removed because they are unused.
