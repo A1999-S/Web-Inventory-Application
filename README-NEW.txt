@@ -1,10 +1,9 @@
 --------------------------------------- Changes ---------------------------------
 
--------------------------------- TO LOAD SAMPLE INVENTORY ---------------------------
 ------------------------------------- IMPORTANT!!!!! -------------------------------------
-Database files are inside the main project folder, in a folder titled 'InventoryDatabase'.
-   To load the database, please unzip them and add them to your C:\user\[yourname].
-   If this is not done, the sample inventory will NOT load.
+Database files are inside the main project folder "d287-java-frameworks".
+The location of the database files should NOT need to be changed as it is set to load from this folder without
+any modifications.
 
 
 ## LINES 14 - 100 @ mainscreen.html (Part C)
