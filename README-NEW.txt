@@ -1,9 +1,8 @@
 --------------------------------------- Changes ---------------------------------
 
 ------------------------------------- IMPORTANT!!!!! -------------------------------------
-Database files are inside the main project folder "d287-java-frameworks".
-The location of the database files should NOT need to be changed as it is set to load from this folder without
-any modifications.
+Database files are inside the main project folder in a file named "InventoryDatabase". It should load automatically.
+If needed, A copy of the database files can be found inside a folder named "SpareDB".
 
 
 ## LINES 14 - 100 @ mainscreen.html (Part C)
