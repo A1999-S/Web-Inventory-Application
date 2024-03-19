@@ -1,7 +1,7 @@
 --------------------------------------- Changes ---------------------------------
 
 ------------------------------------- IMPORTANT!!!!! -------------------------------------
-Database files are inside the main project folder in a file named "InventoryDatabase". It should load automatically.
+Database files are inside the main project folder in a file named "IDatabase". It should load automatically.
 If needed, A copy of the database files can be found inside a folder named "SpareDB".
 
 
